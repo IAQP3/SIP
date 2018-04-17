@@ -25,16 +25,34 @@
             <data_type>h</data_type>
             <field>3</field>
             <factor>1</factor>
-            <unit>C</unit>
+            <unit>ppm</unit>
         </uuid>
         <uuid>
             <name>00000202-0000-1000-8000-00805f9b34fb</name>
             <sensor>TVOC</sensor>
             <location>ambience</location>
-            <data_type>H</data_type>
+            <data_type>h</data_type>
             <field>4</field>
             <factor>1</factor>
-            <unit>ppm</unit>
+            <unit>ppb</unit>
+        </uuid>
+        <uuid>
+            <name>00000206-0000-1000-8000-00805f9b34fb</name>
+            <sensor>Light</sensor>
+            <location>H2S</location>
+            <data_type>h</data_type>
+            <field>5</field>
+            <factor>1</factor>
+            <unit></unit>
+        </uuid>
+        <uuid>
+            <name>00002a19-0000-1000-8000-00805f9b34fb</name>
+            <sensor>Battery level</sensor>
+            <location>Sensor</location>
+            <data_type>H</data_type>
+            <field>8</field>
+            <factor>1</factor>
+            <unit>%</unit>
         </uuid>
     </uuids>
     <api_keys>

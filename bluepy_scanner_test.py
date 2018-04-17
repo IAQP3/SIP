@@ -3,6 +3,8 @@ import time
 import struct
 import sys
 import datetime
+from threading import Thread
+import RPi.GPIO as GPIO
 
 from cloudpost import *
 
@@ -111,7 +113,7 @@ def preparePeripheral(device):
 					print("   Added characteristics: {}".format(char.uuid.getCommonName()))
 					peripheral.availableChararacteristics.append(char)
 				else:
-					print("   Found characteristics: {}".format(char.uuid.getCommonName()))
+					print("   (Unused characteristics: {})".format(char.uuid.getCommonName()))
 					
 	return peripheral
 
@@ -130,15 +132,49 @@ def readCharacteristicsToBuffer(peripheral):
 			peripheral.channel.add_to_buffer(field,value)
 		except:
 			print("Read of value {} failed.".format(sensor))
-		print("  -{}:\t{} {} Raw: {}".format(sensor, value, unit, read_data))	
+		print("  -{}:\t{} {} \t Raw: {}".format(sensor, value, unit, read_data))
 
 
-
+'''
+#Threaded blinking
+class blink_led(Thread):
+	def __init__(self, count, delay):
+		Thread.__init__(self)
+		self.setDaemon(True)
+		self._count=count
+		self._delay=delay
+		self.start()
+		
+	def run(self):
+		for _ in range(0,self._count*2):
+			input_state=GPIO.input(18)
+			GPIO.output(18, 1-input_state)
+			time.sleep(self._delay)
+'''		
+	
+class Led():
+	def __init__(self, pin):
+		GPIO.setwarnings(False)
+		GPIO.setmode(GPIO.BCM)
+		GPIO.setup(pin, GPIO.OUT)
+		GPIO.output(18, 0)
+		#self._thread=Thread(target=self._blink)
+	
+	def blink(self, count, delay):
+		for _ in range(0,count*2):
+			input_state=GPIO.input(18)
+			GPIO.output(18, 1-input_state)
+			time.sleep(delay)
+			
+		
 def main():
+	
 	load_recognized_characteristics()
 	cloud = CloudPost()
 	cloud.get_channel_information()
 	loop_counter = 0
+	
+	status_led=Led(18)
 	
 	while True:
 		loop_counter = loop_counter + 1
@@ -163,6 +199,8 @@ def main():
 			else:
 				peripheral.channel = cloud.create_channel(peripheral.addr.upper())
 		
+		status_led.blink(4,0.1)
+		
 		# Read all connected devices characteristics
 		# Add them to a buffer and post to the cloud
 		print("Reading peripherals:")
@@ -172,13 +210,12 @@ def main():
 			
 			readCharacteristicsToBuffer(peripheral)
 
-			#peripheral.channel.post()
+			peripheral.channel.post()
 			peripheral.disconnect()
 		
-		sys.exit(1)
+		#sys.exit(1)
 		print("Time: {}\n".format(datetime.datetime.now()))
-		time.sleep(5*60)
-
+		time.sleep(2*60)
 
 
 if __name__ == "__main__":
