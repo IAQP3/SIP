@@ -1,6 +1,7 @@
 import requests
 import json
 import xml.etree.ElementTree
+import os
 
 # Own modules
 from channel import *
@@ -17,7 +18,8 @@ class CloudPost(object):
 		self.create_channel_url = ''#'https://api.thingspeak.com/channels.json'
 		self.api_post_url = ''#'https://api.thingspeak.com/update.json'
 		
-		self.settings_file = 'settings.xml'
+		py_path=os.path.dirname(os.path.realpath(__file__))
+		self.settings_file = py_path+"/settings.xml"
 		self.load_settings()
 
 		# Variables

@@ -2,11 +2,12 @@ import xml.etree.ElementTree
 import requests
 import socket
 from time import gmtime, strftime
-
+import os
 
 class Channel():
 	def __init__(self, api_key, name, address, ID):
-		self.settings_file = "settings.xml"
+		py_path=os.path.dirname(os.path.realpath(__file__))
+		self.settings_file = py_path+"/settings.xml"
 		self.api_key = api_key
 		self.supportedUUIDS = []
 		self.name = name

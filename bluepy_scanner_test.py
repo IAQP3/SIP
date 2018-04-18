@@ -2,6 +2,7 @@ from bluepy.btle import Scanner, DefaultDelegate, UUID, Peripheral, BTLEExceptio
 import time
 import struct
 import sys
+import os
 import datetime
 from threading import Thread
 import RPi.GPIO as GPIO
@@ -11,10 +12,13 @@ from cloudpost import *
 
 recognizedServices = dict()
 BLE_SERVICE_ENVIRONMENT = "0000181a-0000-1000-8000-00805f9b34fb"
-settings_file = ("settings.xml")
+
+py_path=os.path.dirname(os.path.realpath(__file__))
+settings_path = py_path+"/settings.xml"
+
 
 def load_recognized_characteristics():
-    parsed_file = xml.etree.ElementTree.parse(settings_file).getroot()
+    parsed_file = xml.etree.ElementTree.parse(settings_path).getroot()
     uuid_root = parsed_file.find('uuids')
     chars = []
     for atype in uuid_root.findall('uuid'):
@@ -80,7 +84,6 @@ def scanForDevices():
 	return devices;
 
 def scanIAQDevices():
-	print("\nScanning for devices....")
 	iaq_devices = [];
 	devices = scanForDevices()
 	for dev in devices:
@@ -89,7 +92,7 @@ def scanIAQDevices():
 				if "IAQ" in value:
 					iaq_devices.append(dev);
 					print("  -{} \t({}) \tRSSI={} dB".format(value, dev.addr, dev.rssi))
-	print("Scan complete\n");
+
 	return iaq_devices
 
 	
@@ -177,8 +180,11 @@ def main():
 	status_led=Led(18)
 	
 	while True:
+		status_led.blink(5,0.1)
 		loop_counter = loop_counter + 1
+		
 		# Scan for devices until found
+		print("\nScanning for devices....")
 		devices = []
 		while not len(devices):
 			devices = scanIAQDevices();
@@ -199,8 +205,6 @@ def main():
 			else:
 				peripheral.channel = cloud.create_channel(peripheral.addr.upper())
 		
-		status_led.blink(4,0.1)
-		
 		# Read all connected devices characteristics
 		# Add them to a buffer and post to the cloud
 		print("Reading peripherals:")
@@ -212,6 +216,7 @@ def main():
 
 			peripheral.channel.post()
 			peripheral.disconnect()
+			status_led.blink(3,0.5)
 		
 		#sys.exit(1)
 		print("Time: {}\n".format(datetime.datetime.now()))
