@@ -195,7 +195,10 @@ def main():
 		print("Preparing peripherals:")
 		for device in devices:
 			print(" Peripheral:\t{}".format(device.addr))
-			peripherals.append(preparePeripheral(device))
+			try:
+				peripherals.append(preparePeripheral(device))
+			except(btle.BTLEException):
+				print("Failed to connect")
 		
 		# See if a Thingspeak channel exists for this device
 		# Create a new channel if not

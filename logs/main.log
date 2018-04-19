@@ -1,0 +1,1323 @@
+Init cloud connection
+Cloud settings found fields:
+{'field1': 'Temperature', 'field5': 'Light', 'field8': 'Battery level', 'field3': 'CO2', 'field2': 'Humidity', 'field4': 'TVOC'}
+Cloud connection Error
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-67 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Creating channel
+Only one channel
+new channel parsed
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.0 C 	 Raw: b'\xc4\t'
+Read of value Battery level failed.
+  -Battery level:	25.0 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'created_at': '2018-04-19T06:30:35+00:00', 'channel_id': 478769, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '6500.0', 'longitude': None, 'entry_id': 1, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 06:30:38.150367
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-69 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.25 C 	 Raw: b'\xdd\t'
+Read of value Battery level failed.
+  -Battery level:	25.25 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'created_at': '2018-04-19T06:32:54+00:00', 'channel_id': 478769, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '6500.0', 'longitude': None, 'entry_id': 2, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 06:32:57.892793
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-71 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.5 C 	 Raw: b'\xf6\t'
+Read of value Battery level failed.
+  -Battery level:	25.5 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'created_at': '2018-04-19T06:35:10+00:00', 'channel_id': 478769, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '6500.0', 'longitude': None, 'entry_id': 3, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 06:35:13.287014
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-71 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.5 C 	 Raw: b'\xf6\t'
+Read of value Battery level failed.
+  -Battery level:	25.5 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'created_at': '2018-04-19T06:37:25+00:00', 'channel_id': 478769, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '6500.0', 'longitude': None, 'entry_id': 4, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 06:37:28.626067
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-66 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.25 C 	 Raw: b'\xdd\t'
+Read of value Battery level failed.
+  -Battery level:	25.25 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'created_at': '2018-04-19T06:39:40+00:00', 'channel_id': 478769, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '6500.0', 'longitude': None, 'entry_id': 5, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 06:39:43.733988
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-65 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.0 C 	 Raw: b'\xc4\t'
+Read of value Battery level failed.
+  -Battery level:	25.0 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'created_at': '2018-04-19T06:41:56+00:00', 'channel_id': 478769, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '6500.0', 'longitude': None, 'entry_id': 6, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 06:41:59.167104
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-72 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.0 C 	 Raw: b'\xc4\t'
+Read of value Battery level failed.
+  -Battery level:	25.0 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'created_at': '2018-04-19T06:44:11+00:00', 'channel_id': 478769, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '6500.0', 'longitude': None, 'entry_id': 7, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 06:44:14.657352
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-69 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.25 C 	 Raw: b'\xdd\t'
+Read of value Battery level failed.
+  -Battery level:	25.25 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'created_at': '2018-04-19T06:46:26+00:00', 'channel_id': 478769, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '6500.0', 'longitude': None, 'entry_id': 8, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 06:46:29.924462
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-70 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.0 C 	 Raw: b'\xc4\t'
+Read of value Battery level failed.
+  -Battery level:	25.0 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'created_at': '2018-04-19T06:48:43+00:00', 'channel_id': 478769, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '6500.0', 'longitude': None, 'entry_id': 9, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 06:48:46.356671
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-63 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.0 C 	 Raw: b'\xc4\t'
+Read of value Battery level failed.
+  -Battery level:	25.0 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'created_at': '2018-04-19T06:50:58+00:00', 'channel_id': 478769, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '6500.0', 'longitude': None, 'entry_id': 10, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 06:51:01.605260
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-66 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.0 C 	 Raw: b'\xc4\t'
+Read of value Battery level failed.
+  -Battery level:	25.0 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'created_at': '2018-04-19T06:53:14+00:00', 'channel_id': 478769, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '6500.0', 'longitude': None, 'entry_id': 11, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 06:53:17.192520
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-66 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.25 C 	 Raw: b'\xdd\t'
+Read of value Battery level failed.
+  -Battery level:	25.25 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'created_at': '2018-04-19T06:55:29+00:00', 'channel_id': 478769, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '6500.0', 'longitude': None, 'entry_id': 12, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 06:55:32.436285
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-77 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.25 C 	 Raw: b'\xdd\t'
+Read of value Battery level failed.
+  -Battery level:	25.25 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'created_at': '2018-04-19T06:57:44+00:00', 'channel_id': 478769, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '6500.0', 'longitude': None, 'entry_id': 13, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 06:57:47.715398
+
+
+Scanning for devices....
+  -IAQ Sensor 	(e8:36:5e:e5:ac:6f) 	RSSI=-36 dB
+Preparing peripherals:
+ Peripheral:	e8:36:5e:e5:ac:6f
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Creating channel
+Only one channel
+new channel parsed
+Reading peripherals:
+e8:36:5e:e5:ac:6f
+  -Temperature:	19.5 C 	 Raw: b'\x9e\x07'
+Read of value Battery level failed.
+  -Battery level:	19.5 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	0.0 C 	 Raw: b'\x00\x00'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	0.0 ppb 	 Raw: b'\x00\x00'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '0.0', 'created_at': '2018-04-19T07:09:45+00:00', 'channel_id': 478805, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '0.0', 'longitude': None, 'entry_id': 1, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 07:09:48.900391
+
+
+Scanning for devices....
+  -IAQ Sensor 	(e8:36:5e:e5:ac:6f) 	RSSI=-36 dB
+Preparing peripherals:
+ Peripheral:	e8:36:5e:e5:ac:6f
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+e8:36:5e:e5:ac:6f
+  -Temperature:	19.75 C 	 Raw: b'\xb7\x07'
+Read of value Battery level failed.
+  -Battery level:	19.75 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	0.0 C 	 Raw: b'\x00\x00'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	0.0 ppb 	 Raw: b'\x00\x00'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '0.0', 'created_at': '2018-04-19T07:12:01+00:00', 'channel_id': 478805, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '0.0', 'longitude': None, 'entry_id': 2, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 07:12:04.500865
+
+
+Scanning for devices....
+  -IAQ Sensor 	(e8:36:5e:e5:ac:6f) 	RSSI=-37 dB
+Preparing peripherals:
+ Peripheral:	e8:36:5e:e5:ac:6f
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+e8:36:5e:e5:ac:6f
+  -Temperature:	20.75 C 	 Raw: b'\x1b\x08'
+Read of value Battery level failed.
+  -Battery level:	20.75 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	0.0 C 	 Raw: b'\x00\x00'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	0.0 ppb 	 Raw: b'\x00\x00'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '0.0', 'created_at': '2018-04-19T07:14:16+00:00', 'channel_id': 478805, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '0.0', 'longitude': None, 'entry_id': 3, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 07:14:19.765478
+
+
+Scanning for devices....
+  -IAQ Sensor 	(e8:36:5e:e5:ac:6f) 	RSSI=-37 dB
+Preparing peripherals:
+ Peripheral:	e8:36:5e:e5:ac:6f
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+e8:36:5e:e5:ac:6f
+  -Temperature:	20.75 C 	 Raw: b'\x1b\x08'
+Read of value Battery level failed.
+  -Battery level:	20.75 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	0.0 C 	 Raw: b'\x00\x00'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	0.0 ppb 	 Raw: b'\x00\x00'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '0.0', 'created_at': '2018-04-19T07:16:31+00:00', 'channel_id': 478805, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '0.0', 'longitude': None, 'entry_id': 4, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 07:16:35.067983
+
+
+Scanning for devices....
+  -IAQ Sensor 	(e8:36:5e:e5:ac:6f) 	RSSI=-37 dB
+Preparing peripherals:
+ Peripheral:	e8:36:5e:e5:ac:6f
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+e8:36:5e:e5:ac:6f
+  -Temperature:	21.0 C 	 Raw: b'4\x08'
+Read of value Battery level failed.
+  -Battery level:	21.0 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	0.0 C 	 Raw: b'\x00\x00'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	0.0 ppb 	 Raw: b'\x00\x00'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '0.0', 'created_at': '2018-04-19T07:18:47+00:00', 'channel_id': 478805, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '0.0', 'longitude': None, 'entry_id': 5, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 07:18:50.161256
+
+
+Scanning for devices....
+  -IAQ Sensor 	(e8:36:5e:e5:ac:6f) 	RSSI=-37 dB
+Preparing peripherals:
+ Peripheral:	e8:36:5e:e5:ac:6f
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+e8:36:5e:e5:ac:6f
+  -Temperature:	21.25 C 	 Raw: b'M\x08'
+Read of value Battery level failed.
+  -Battery level:	21.25 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	0.0 C 	 Raw: b'\x00\x00'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	0.0 ppb 	 Raw: b'\x00\x00'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '0.0', 'created_at': '2018-04-19T07:21:02+00:00', 'channel_id': 478805, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '0.0', 'longitude': None, 'entry_id': 6, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 07:21:05.610413
+
+
+Scanning for devices....
+  -IAQ Sensor 	(e8:36:5e:e5:ac:6f) 	RSSI=-37 dB
+Preparing peripherals:
+ Peripheral:	e8:36:5e:e5:ac:6f
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+e8:36:5e:e5:ac:6f
+  -Temperature:	21.0 C 	 Raw: b'4\x08'
+Read of value Battery level failed.
+  -Battery level:	21.0 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	0.0 C 	 Raw: b'\x00\x00'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	0.0 ppb 	 Raw: b'\x00\x00'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '0.0', 'created_at': '2018-04-19T07:23:21+00:00', 'channel_id': 478805, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '0.0', 'longitude': None, 'entry_id': 7, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 07:23:24.853715
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-45 dB
+  -IAQ Sensor 	(e8:36:5e:e5:ac:6f) 	RSSI=-37 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+ Peripheral:	e8:36:5e:e5:ac:6f
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Creating channel
+Only one channel
+new channel parsed
+Creating channel
+Only one channel
+new channel parsed
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	21.25 C 	 Raw: b'M\x08'
+Read of value Battery level failed.
+  -Battery level:	21.25 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	0.0 C 	 Raw: b'\x00\x00'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	0.0 ppb 	 Raw: b'\x00\x00'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '0.0', 'created_at': '2018-04-19T07:25:42+00:00', 'channel_id': 478816, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '0.0', 'longitude': None, 'entry_id': 1, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+e8:36:5e:e5:ac:6f
+  -Temperature:	21.25 C 	 Raw: b'M\x08'
+Read of value Battery level failed.
+  -Battery level:	21.25 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	0.0 C 	 Raw: b'\x00\x00'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	0.0 ppb 	 Raw: b'\x00\x00'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '0.0', 'created_at': '2018-04-19T07:25:48+00:00', 'channel_id': 478817, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '0.0', 'longitude': None, 'entry_id': 1, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 07:25:52.105971
+
+
+Scanning for devices....
+  -IAQ Sensor 	(e8:36:5e:e5:ac:6f) 	RSSI=-36 dB
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-46 dB
+Preparing peripherals:
+ Peripheral:	e8:36:5e:e5:ac:6f
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Creating channel
+Only one channel
+new channel parsed
+Reading peripherals:
+e8:36:5e:e5:ac:6f
+  -Temperature:	25.75 C 	 Raw: b'\x0f\n'
+Read of value Battery level failed.
+  -Battery level:	25.75 % 	 Raw: b'R\x07`\t'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	11679.0 None 	 Raw: b'\x9f-'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'created_at': '2018-04-19T07:28:08+00:00', 'channel_id': 478817, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '6500.0', 'longitude': None, 'entry_id': 2, 'field6': None, 'elevation': None, 'field5': '11679.0', 'latitude': None, 'field3': '0.0'}
+
+
+d5:21:56:28:b0:af
+  -Temperature:	25.5 C 	 Raw: b'\xf6\t'
+Read of value Battery level failed.
+  -Battery level:	25.5 % 	 Raw: b'R\x07b\t'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	11682.0 None 	 Raw: b'\xa2-'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'created_at': '2018-04-19T07:28:14+00:00', 'channel_id': 478819, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '6500.0', 'longitude': None, 'entry_id': 1, 'field6': None, 'elevation': None, 'field5': '11682.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 07:28:17.947871
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-46 dB
+  -IAQ Sensor 	(e8:36:5e:e5:ac:6f) 	RSSI=-39 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+ Peripheral:	e8:36:5e:e5:ac:6f
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Creating channel
+Only one channel
+new channel parsed
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	21.5 C 	 Raw: b'f\x08'
+Read of value Battery level failed.
+  -Battery level:	21.5 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	0.0 C 	 Raw: b'\x00\x00'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	0.0 ppb 	 Raw: b'\x00\x00'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '0.0', 'created_at': '2018-04-19T07:30:34+00:00', 'channel_id': 478819, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '0.0', 'longitude': None, 'entry_id': 2, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+e8:36:5e:e5:ac:6f
+  -Temperature:	21.75 C 	 Raw: b'\x7f\x08'
+Read of value Battery level failed.
+  -Battery level:	21.75 % 	 Raw: b'R\x07\x00\x00'
+  -Temperature:	0.0 C 	 Raw: b'\x00\x00'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	0.0 ppb 	 Raw: b'\x00\x00'
+  -Light:	0.0 None 	 Raw: b'\x00\x00'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '0.0', 'created_at': '2018-04-19T07:30:40+00:00', 'channel_id': 478823, 'status': None, 'field7': None, 'field8': None, 'field2': '0.0', 'field4': '0.0', 'longitude': None, 'entry_id': 1, 'field6': None, 'elevation': None, 'field5': '0.0', 'latitude': None, 'field3': '0.0'}
+
+
+Time: 2018-04-19 07:30:44.009242
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-48 dB
+  -IAQ Sensor 	(e8:36:5e:e5:ac:6f) 	RSSI=-38 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+Traceback (most recent call last):
+  File "/home/pi/SIP/bluepy_scanner_test.py", line 199, in main
+    peripherals.append(preparePeripheral(device))
+  File "/home/pi/SIP/bluepy_scanner_test.py", line 101, in preparePeripheral
+    peripheral = Peripheral(device)
+  File "/usr/local/lib/python3.5/dist-packages/bluepy/btle.py", line 351, in __init__
+    self._connect(deviceAddr.addr, deviceAddr.addrType, deviceAddr.iface)
+  File "/usr/local/lib/python3.5/dist-packages/bluepy/btle.py", line 402, in _connect
+    "Failed to connect to peripheral %s, addr type: %s" % (addr, addrType))
+bluepy.btle.BTLEException: Failed to connect to peripheral d5:21:56:28:b0:af, addr type: random
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/SIP/bluepy_scanner_test.py", line 230, in <module>
+    main()
+  File "/home/pi/SIP/bluepy_scanner_test.py", line 200, in main
+    except(bluepy.btle.BTLEException):
+NameError: name 'bluepy' is not defined
+Init cloud connection
+Cloud settings found fields:
+{'field1': 'Temperature', 'field2': 'Humidity', 'field4': 'TVOC', 'field3': 'CO2', 'field8': 'Battery level', 'field5': 'Light'}
+Channel info request succesfull!
+
+Scanning for devices....
+  -IAQ Sensor 	(e8:36:5e:e5:ac:6f) 	RSSI=-41 dB
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-45 dB
+Preparing peripherals:
+ Peripheral:	e8:36:5e:e5:ac:6f
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+e8:36:5e:e5:ac:6f
+  -Temperature:	25.75 C 	 Raw: b'\x0f\n'
+Read of value Battery level failed.
+  -Battery level:	25.75 % 	 Raw: b'R\x07!\n'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	12230.0 None 	 Raw: b'\xc6/'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'field5': '12230.0', 'status': None, 'entry_id': 2, 'elevation': None, 'channel_id': 478823, 'field2': '0.0', 'field4': '6500.0', 'field7': None, 'latitude': None, 'field8': None, 'field3': '0.0', 'created_at': '2018-04-19T07:37:38+00:00', 'longitude': None, 'field6': None}
+
+
+d5:21:56:28:b0:af
+  -Temperature:	25.75 C 	 Raw: b'\x0f\n'
+Read of value Battery level failed.
+  -Battery level:	25.75 % 	 Raw: b'R\x07!\n'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	12228.0 None 	 Raw: b'\xc4/'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'field5': '12228.0', 'status': None, 'entry_id': 3, 'elevation': None, 'channel_id': 478819, 'field2': '0.0', 'field4': '6500.0', 'field7': None, 'latitude': None, 'field8': None, 'field3': '0.0', 'created_at': '2018-04-19T07:37:44+00:00', 'longitude': None, 'field6': None}
+
+
+Time: 2018-04-19 07:37:47.968296
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-50 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.75 C 	 Raw: b'\x0f\n'
+Read of value Battery level failed.
+  -Battery level:	25.75 % 	 Raw: b'R\x07\xfd\x0c'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	16134.0 None 	 Raw: b'\x06?'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'field5': '16134.0', 'status': None, 'entry_id': 4, 'elevation': None, 'channel_id': 478819, 'field2': '0.0', 'field4': '6500.0', 'field7': None, 'latitude': None, 'field8': None, 'field3': '0.0', 'created_at': '2018-04-19T07:40:04+00:00', 'longitude': None, 'field6': None}
+
+
+Time: 2018-04-19 07:40:08.416914
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-51 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.25 C 	 Raw: b'\xdd\t'
+Read of value Battery level failed.
+  -Battery level:	25.25 % 	 Raw: b'R\x07\xfa\x0c'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	16073.0 None 	 Raw: b'\xc9>'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'field5': '16073.0', 'status': None, 'entry_id': 5, 'elevation': None, 'channel_id': 478819, 'field2': '0.0', 'field4': '6500.0', 'field7': None, 'latitude': None, 'field8': None, 'field3': '0.0', 'created_at': '2018-04-19T07:42:20+00:00', 'longitude': None, 'field6': None}
+
+
+Time: 2018-04-19 07:42:23.607097
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-57 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.75 C 	 Raw: b'\x0f\n'
+Read of value Battery level failed.
+  -Battery level:	25.75 % 	 Raw: b'R\x07\xe2\x0c'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	16041.0 None 	 Raw: b'\xa9>'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'field5': '16041.0', 'status': None, 'entry_id': 6, 'elevation': None, 'channel_id': 478819, 'field2': '0.0', 'field4': '6500.0', 'field7': None, 'latitude': None, 'field8': None, 'field3': '0.0', 'created_at': '2018-04-19T07:44:35+00:00', 'longitude': None, 'field6': None}
+
+
+Time: 2018-04-19 07:44:39.052687
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-50 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.5 C 	 Raw: b'\xf6\t'
+Read of value Battery level failed.
+  -Battery level:	25.5 % 	 Raw: b'R\x07\x03\r'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	16105.0 None 	 Raw: b'\xe9>'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'field5': '16105.0', 'status': None, 'entry_id': 7, 'elevation': None, 'channel_id': 478819, 'field2': '0.0', 'field4': '6500.0', 'field7': None, 'latitude': None, 'field8': None, 'field3': '0.0', 'created_at': '2018-04-19T07:46:51+00:00', 'longitude': None, 'field6': None}
+
+
+Time: 2018-04-19 07:46:54.426417
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-56 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.75 C 	 Raw: b'\x0f\n'
+Read of value Battery level failed.
+  -Battery level:	25.75 % 	 Raw: b'R\x077\r'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	16198.0 None 	 Raw: b'F?'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'field5': '16198.0', 'status': None, 'entry_id': 8, 'elevation': None, 'channel_id': 478819, 'field2': '0.0', 'field4': '6500.0', 'field7': None, 'latitude': None, 'field8': None, 'field3': '0.0', 'created_at': '2018-04-19T07:49:07+00:00', 'longitude': None, 'field6': None}
+
+
+Time: 2018-04-19 07:49:11.167181
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-57 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	25.25 C 	 Raw: b'\xdd\t'
+Read of value Battery level failed.
+  -Battery level:	25.25 % 	 Raw: b'R\x07\xa4\r'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	16360.0 None 	 Raw: b'\xe8?'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'field5': '16360.0', 'status': None, 'entry_id': 9, 'elevation': None, 'channel_id': 478819, 'field2': '0.0', 'field4': '6500.0', 'field7': None, 'latitude': None, 'field8': None, 'field3': '0.0', 'created_at': '2018-04-19T07:51:23+00:00', 'longitude': None, 'field6': None}
+
+
+Time: 2018-04-19 07:51:26.561337
+
+
+Scanning for devices....
+  -IAQ Sensor 	(d5:21:56:28:b0:af) 	RSSI=-57 dB
+Preparing peripherals:
+ Peripheral:	d5:21:56:28:b0:af
+
+  Found recognized service: Environmental Sensing
+   Added characteristics: Temperature
+   Added characteristics: Battery Level
+   Added characteristics: Temperature
+   Added characteristics: Humidity
+   Added characteristics: 0201
+   Added characteristics: 0202
+   (Unused characteristics: 0203)
+   (Unused characteristics: 0204)
+   (Unused characteristics: 0205)
+   Added characteristics: 0206
+Reading peripherals:
+d5:21:56:28:b0:af
+  -Temperature:	26.0 C 	 Raw: b'(\n'
+Read of value Battery level failed.
+  -Battery level:	26.0 % 	 Raw: b'R\x07\x9e\r'
+  -Temperature:	-0.01 C 	 Raw: b'\xff\xff'
+  -Humidity:	0.0 % 	 Raw: b'\x00\x00'
+  -CO2:	0.0 ppm 	 Raw: b'\x00\x00'
+  -TVOC:	6500.0 ppb 	 Raw: b'd\x19'
+  -Light:	16351.0 None 	 Raw: b'\xdf?'
+Send read data to cloud
+Response before json:
+<Response [200]>
+
+RESPONSE #
+{'field1': '-0.01', 'field5': '16351.0', 'status': None, 'entry_id': 10, 'elevation': None, 'channel_id': 478819, 'field2': '0.0', 'field4': '6500.0', 'field7': None, 'latitude': None, 'field8': None, 'field3': '0.0', 'created_at': '2018-04-19T07:53:38+00:00', 'longitude': None, 'field6': None}
+
+
+Time: 2018-04-19 07:53:41.773988
+

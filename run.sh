@@ -1,7 +1,8 @@
 #!/bin/bash
 
-python3 /home/pi/SIP/bluepy_scanner_test.py >> /home/pi/SIP/logs/main.log 2>&1
+sudo python3 -u /home/pi/SIP/bluepy_scanner_test.py |& tee -a /home/pi/SIP/logs/main.log
+
+echo "python crashed"
 
 #run error script if python crashes
-python3 /home/pi/SIP/error.py
-
+sudo python3 /home/pi/SIP/error.py
