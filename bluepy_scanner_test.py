@@ -109,7 +109,7 @@ def preparePeripheral(device):
 	
 	for ser in services:
 		if ser.uuid == BLE_SERVICE_ENVIRONMENT:
-			print("\n  Found recognized service: {}".format(ser.uuid.getCommonName()))
+			print("  Found recognized service: {}".format(ser.uuid.getCommonName()))
 			serChar = ser.getCharacteristics()
 			for char in serChar:
 				if char.uuid in recognizedServices[str(ser.uuid)]:
@@ -179,6 +179,7 @@ def main():
 	
 	status_led=Led(18)
 	
+	
 	while True:
 		status_led.blink(5,0.1)
 		loop_counter = loop_counter + 1
@@ -194,7 +195,7 @@ def main():
 		peripherals = []
 		print("Preparing peripherals:")
 		for device in devices:
-			print(" Peripheral:\t{}".format(device.addr))
+			print("\n Peripheral:\t{}".format(device.addr))
 			try:
 				peripherals.append(preparePeripheral(device))
 			except(btle.BTLEException):

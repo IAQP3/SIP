@@ -19,8 +19,7 @@ class Led():
 def main():
 	status_led=Led(18)
 	
-	while True:
-		status_led.blink(1,1)
+	status_led.blink(10,1)
 
 if __name__ == "__main__":
 	main()

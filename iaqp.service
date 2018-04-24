@@ -1,0 +1,12 @@
+[Unit]
+Description=IAQP main python
+After=multi-user.target
+
+[Service]
+Type=forking
+ExecStart=/home/pi/SIP/run.sh
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
