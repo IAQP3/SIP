@@ -1,6 +1,5 @@
 import xml.etree.ElementTree
 import requests
-import socket
 from time import gmtime, strftime
 import os
 
@@ -33,17 +32,14 @@ class Channel():
 		except requests.exceptions.ConnectionError as e:
 			print('Connection Error')
 			print(e)
-			return 0
 		
 		if (r.status_code==200):
 			print("\nSuccesfully posted data:")
 			print(r.json())
-			return 1
 		else:
 			print("\nError posting data:")
-			print(r.status_code)
-			return 0
-			
+		
+		return r.status_code
 	
 	def get_field_for_UUID(self, uuid):
 		for a in self.supportedUUIDS:
