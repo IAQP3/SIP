@@ -6,16 +6,25 @@ import os
 import datetime
 from threading import Thread
 import RPi.GPIO as GPIO
-
+import logging
 from cloudpost import *
+
+py_path=os.path.dirname(os.path.realpath(__file__))
+
+
+#LOGGING
+logging.basicConfig(level=logging.DEBUG)
+file_logger = logging.getLogger('main')
+
+file_handler = logging.FileHandler(py_path+'/logs/crash.log')
+file_logger.addHandler(file_handler) 
+file_logger.setLevel(logging.WARNING)
 
 
 recognizedServices = dict()
 BLE_SERVICE_ENVIRONMENT = "0000181a-0000-1000-8000-00805f9b34fb"
 
-py_path=os.path.dirname(os.path.realpath(__file__))
 settings_path = py_path+"/settings.xml"
-
 
 def load_recognized_characteristics():
     parsed_file = xml.etree.ElementTree.parse(settings_path).getroot()
@@ -23,21 +32,9 @@ def load_recognized_characteristics():
     chars = []
     for atype in uuid_root.findall('uuid'):
         chars.append(atype.find('name').text)
-    #print("Parsed UUIDs: {}\n".format(chars))
+    logging.debug("Parsed UUIDs: {}\n".format(chars))
     recognizedServices[BLE_SERVICE_ENVIRONMENT] = chars
-        
-#load_recognized_characteristics()
-
-
-'''
-BLE_CHAR_TEMPERATURE      = "00002a6e-0000-1000-8000-00805f9b34fb"
-BLE_CHAR_HUMIDITY               = "00002a6f-0000-1000-8000-00805f9b34fb"
-
-recognizedServices = dict()
-recognizedServices[BLE_SERVICE_ENVIRONMENT] = [BLE_CHAR_TEMPERATURE, BLE_CHAR_HUMIDITY]
-print("Services dictionary:")
-'''
-#print(recognizedServices)
+	
 
 
 class ScanDelegate(DefaultDelegate):
@@ -46,9 +43,9 @@ class ScanDelegate(DefaultDelegate):
 
 	def handleDiscovery(self, device, isNewDev, isNewData):
 		if isNewDev:
-			print("Discovered device: {}".format(device.addr))
+			logging.info("Discovered device: {}".format(device.addr))
 		elif isNewData:
-			print("Received new data from: {}".format(device.addr))
+			logging.info("Received new data from: {}".format(device.addr))
  
  
 class MyDelegate(DefaultDelegate):
@@ -58,23 +55,23 @@ class MyDelegate(DefaultDelegate):
 
 def printAdvertisingInformation(device):
 	for (adtype, desc, value) in device.getScanData():
-		print("{}: {}".format(desc, value)) 
-	print("Address: {}".format(device.addr))
-	print("AddressType: {}".format(device.addrType))
-	print("Interfacenumber: {}".format(device.iface))
-	print("Signal strength: {}".format(device.rssi))
-	print("Device is connectable: {}".format(device.connectable))
-	print("Number of recieved packets: {}".format(device.updateCount))
+		logging.info("{}: {}".format(desc, value)) 
+	logging.info("Address: {}".format(device.addr))
+	logging.info("AddressType: {}".format(device.addrType))
+	logging.info("Interfacenumber: {}".format(device.iface))
+	logging.info("Signal strength: {}".format(device.rssi))
+	logging.info("Device is connectable: {}".format(device.connectable))
+	logging.info("Number of recieved packets: {}".format(device.updateCount))
 	return True
 
 def printDeviceNames(devices):
-	print("\n\nList of found device names:\n*****************************")
+	logging.info("\n\nList of found device names:\n*****************************")
 	for dev in devices:
-		#print("Device {} ({}), RSSI={} dB".format(dev.addr, dev.addrType, dev.rssi))
+		#logging.info("Device {} ({}), RSSI={} dB".format(dev.addr, dev.addrType, dev.rssi))
 		#print ("Description: {}".format(dev.getDescription(9)))
 		for (adtype, desc, value) in dev.getScanData():
 			if (desc == "Complete Local Name"):
-				print("Device name: {}".format(value))
+				logging.info("Device name: {}".format(value))
 
 			
 			
@@ -91,7 +88,7 @@ def scanIAQDevices():
 			if (desc == "Complete Local Name"):
 				if "IAQ" in value:
 					iaq_devices.append(dev);
-					print("  -{} \t({}) \tRSSI={} dB".format(value, dev.addr, dev.rssi))
+					logging.info("  -{} \t({}) \tRSSI={} dB".format(value, dev.addr, dev.rssi))
 
 	return iaq_devices
 
@@ -109,18 +106,18 @@ def preparePeripheral(device):
 	
 	for ser in services:
 		if ser.uuid == BLE_SERVICE_ENVIRONMENT:
-			print("  Found recognized service: {}".format(ser.uuid.getCommonName()))
+			logging.debug("  Found recognized service: {}".format(ser.uuid.getCommonName()))
 			serChar = ser.getCharacteristics()
 			for char in serChar:
 				if char.uuid in recognizedServices[str(ser.uuid)]:
-					print("   Added characteristics: {}".format(char.uuid.getCommonName()))
+					logging.debug("   Added characteristics: {}".format(char.uuid.getCommonName()))
 					peripheral.availableChararacteristics.append(char)
 				else:
-					print("   (Unused characteristics: {})".format(char.uuid.getCommonName()))
+					logging.debug("   (Unused characteristics: {})".format(char.uuid.getCommonName()))
 					
 	return peripheral
 
-def readCharacteristicsToBuffer(peripheral):
+def readCharacteristics(peripheral):
 	read_buffer=[]
 	
 	for char in peripheral.availableChararacteristics:
@@ -137,8 +134,9 @@ def readCharacteristicsToBuffer(peripheral):
 			read_buffer.append({'field': str(field), 'value': value})
 			
 		except:
-			print("Read of value {} failed.".format(sensor))
-		print("  -{}:\t{} {} \t Raw: {}".format(sensor, value, unit, read_data))
+			logging.exception("Read of value {} failed.".format(sensor))
+		
+		logging.debug("  -{}:\t{} {} \t Raw: {}".format(sensor, value, unit, read_data))
 	
 	return read_buffer
 
@@ -183,22 +181,21 @@ def main():
 	while True:
 		# Scan for devices until found
 		devices = []
-		print("Scanning for devices")
+		logging.info("Scanning for devices")
 		while not len(devices):
 			devices = scanIAQDevices()
 		
 		# Read all connected devices characteristics
 		# Add them to a buffer and post to the cloud
 		
-		#for peripheral in peripherals:
 		for device in devices:
 			try:
 				peripheral = preparePeripheral(device)
 			except:
-				print("Failed to prepare peripheral")
+				logging.exception("Failed to prepare peripheral")
 				break
 			
-			print("Peripheral address: {}".format(peripheral.addr.upper()))
+			logging.info("Peripheral address: {}".format(peripheral.addr.upper()))
 			
 			if peripheral.addr.upper() in cloud.channels.keys():
 				peripheral.channel = cloud.channels[peripheral.addr.upper()]
@@ -207,16 +204,19 @@ def main():
 			
 			time.sleep(2);#Wait for the peripheral to write all measurements
 			
-			send_data=readCharacteristicsToBuffer(peripheral)
+			send_data=readCharacteristics(peripheral)
 			peripheral.channel.post(send_data)
 			peripheral.disconnect()
 		
-		print("Time: {}\n".format(datetime.datetime.now()))
+		logging.info("Time: {}\n".format(datetime.datetime.now()))
 		time.sleep(60)
 
 
 if __name__ == "__main__":
-	main()
+	try:
+		main()
+	except Exception as e:
+		file_logger.error("Python crashed. Error: %s", e)
 
 	
 	

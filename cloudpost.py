@@ -2,14 +2,17 @@ import requests
 import json
 import xml.etree.ElementTree
 import os
+import logging
 
 # Own modules
 from channel import *
 
+py_path=os.path.dirname(os.path.realpath(__file__))
+
 class CloudPost(object):
 
 	def __init__(self):
-		print("Init cloud connection")
+		logging.info("Init cloud connection")
 		self.channels = {}
 		self.fields = {}
 		
@@ -18,7 +21,6 @@ class CloudPost(object):
 		self.create_channel_url = ''#'https://api.thingspeak.com/channels.json'
 		self.api_post_url = ''#'https://api.thingspeak.com/update.json'
 		
-		py_path=os.path.dirname(os.path.realpath(__file__))
 		self.settings_file = py_path+"/settings.xml"
 		self.load_settings()
 
@@ -29,23 +31,23 @@ class CloudPost(object):
 		# parsed_address = address.replace(":", "")
 
 		data = {'api_key': self.user_api_key,  'name' : 'IAQP device: ' + address, 'description': address} 
-		print("Data before updating:\n{}".format(data));
-		print("self.fields before updating:\n{}".format(self.fields));
+		logging.debug("Data before updating:\n{}".format(data));
+		logging.debug("self.fields before updating:\n{}".format(self.fields));
 		data.update(self.fields)
-		print("Creating channel with data:\n{}".format(data))
+		logging.debug("Creating channel with data:\n{}".format(data))
 		try:
 			r = requests.post(self.create_channel_url, data)
 			response = r.json()
-			print(response)
+			logging.info(response)
 			self.parse_channel_info(response)
 			return self.channels[address]
 			
 		except requests.exceptions.ConnectionError as e:
-			print('Connection Error')
+			logging.exception('Connection Error')
 			response = e
-		print("\nRESPONSE #")
-		print(response)
-		print("\n")
+		logging.info("\nRESPONSE #")
+		logging.info(response)
+		logging.info("\n")
 		return None
 
 	def get_channel_information(self):
@@ -53,19 +55,19 @@ class CloudPost(object):
 			r = requests.get(self.get_channel_info_url)
 			response = r.json()
 			if response == 0:
-				print("Channel information request failed!")
+				logging.info("Channel information request failed!")
 				return
 			elif len(response) == 0:
-				print("No available channels")
+				logging.info("No available channels")
 				return
 			else:
-				print("Channel info request succesfull!")
+				logging.info("Channel info request succesfull!")
 				#self.account_info = json.loads(response)
 				#self.account_info_pretty_print = json.dumps(response, indent=4, sort_keys=True)
 				self.parse_channel_info(response)
 
 		except requests.exceptions.ConnectionError as e:
-			print('Cloud connection Error\n')
+			logging.exception('Cloud connection Error\n')
 			response = e
 
 	def parse_channel_info(self, response):
@@ -87,10 +89,10 @@ class CloudPost(object):
 
 	def print_channel_info(self):
 		if self.channel_info != None:
-			print(self.account_info_pretty_print)
-			print("\n")
+			logging.info(self.account_info_pretty_print)
+			logging.info("\n")
 		else:
-			print("Channel info not avaible!\n")
+			logging.info("Channel info not avaible!\n")
 
 	def load_settings(self):
 		parsed_file = xml.etree.ElementTree.parse(self.settings_file).getroot()
@@ -108,7 +110,7 @@ class CloudPost(object):
 			field = 'field' +  atype.find('field').text
 			field_name  = atype.find('sensor').text
 			self.fields[field] = field_name
-		print("Cloud settings found fields:\n{}".format(self.fields))
+		logging.info("Cloud settings found fields:\n{}".format(self.fields))
 		
 	def load_uuids(self):
 		parsed_file = xml.etree.ElementTree.parse(self.settings_file).getroot()

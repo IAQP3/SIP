@@ -2,10 +2,12 @@ import xml.etree.ElementTree
 import requests
 from time import gmtime, strftime
 import os
+import logging
+
+py_path=os.path.dirname(os.path.realpath(__file__))
 
 class Channel():
 	def __init__(self, api_key, name, address, ID):
-		py_path=os.path.dirname(os.path.realpath(__file__))
 		self.settings_file = py_path+"/settings.xml"
 		self.api_key = api_key
 		self.supportedUUIDS = []
@@ -17,7 +19,7 @@ class Channel():
 		self.load_uuids()
 	
 	def post(self, send_data):
-		print("Sending data to cloud")
+		logging.info("Sending data to cloud")
 		data = {'api_key': self.api_key}
 		
 		for pair in send_data:
@@ -25,17 +27,22 @@ class Channel():
 		
 		try:
 			r = requests.post(self.api_post_url, data)
-			response = r.json()
-			print(response)
-			
 		except requests.exceptions.ConnectionError as e:
-			print('Connection Error')
-			print(e)
+			logging.exception('Connection Error')
+			logging.exception(e)
+			return 0
 		
+		if (r.status_code==200):
+			logging.info("Succesfully posted data")
+			logging.debug(r.json())
+		else:
+			logging.info("Error posting data:")
+		
+		return r.status_code
 	
 	def get_field_for_UUID(self, uuid):
 		for a in self.supportedUUIDS:
-			#print("a: {} uuid: {}".format(a,uuid))
+			#logging.info("a: {} uuid: {}".format(a,uuid))
 			if a['name'] == uuid:
 				return a['field']
 		return None
