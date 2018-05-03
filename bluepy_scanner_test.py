@@ -121,6 +121,8 @@ def preparePeripheral(device):
 	return peripheral
 
 def readCharacteristicsToBuffer(peripheral):
+	read_buffer=[]
+	
 	for char in peripheral.availableChararacteristics:
 		for uuids in peripheral.channel.supportedUUIDS:
 			if uuids['name'] == char.uuid:
@@ -132,11 +134,13 @@ def readCharacteristicsToBuffer(peripheral):
 		try:
 			read_data=char.read()
 			value = factor*struct.unpack(data_type, read_data)[0]
-			peripheral.channel.add_to_buffer(field,value)
+			read_buffer.append({'field': str(field), 'value': value})
+			
 		except:
 			print("Read of value {} failed.".format(sensor))
 		print("  -{}:\t{} {} \t Raw: {}".format(sensor, value, unit, read_data))
-
+	
+	return read_buffer
 
 '''
 #Threaded blinking
@@ -157,75 +161,71 @@ class blink_led(Thread):
 	
 class Led():
 	def __init__(self, pin):
+		self._pin=pin
 		GPIO.setwarnings(False)
 		GPIO.setmode(GPIO.BCM)
-		GPIO.setup(pin, GPIO.OUT)
-		GPIO.output(18, 0)
+		GPIO.setup(self._pin, GPIO.OUT)
+		GPIO.output(self._pin, 0)
 		#self._thread=Thread(target=self._blink)
 	
 	def blink(self, count, delay):
 		for _ in range(0,count*2):
-			input_state=GPIO.input(18)
-			GPIO.output(18, 1-input_state)
+			input_state=GPIO.input(self._pin)
+			GPIO.output(self._pin, 1-input_state)
 			time.sleep(delay)
 			
 		
 def main():
-	
 	load_recognized_characteristics()
 	cloud = CloudPost()
 	cloud.get_channel_information()
-	loop_counter = 0
-	
-	status_led=Led(18)
-	
 	
 	while True:
-		status_led.blink(5,0.1)
-		loop_counter = loop_counter + 1
-		
 		# Scan for devices until found
-		print("\nScanning for devices....")
 		devices = []
+		print("Scanning for devices")
 		while not len(devices):
-			devices = scanIAQDevices();
-
-		# Prepare peripherals
-		# Read recognized services and characteristics and enable adding a channel
-		peripherals = []
-		print("Preparing peripherals:")
-		for device in devices:
-			print("\n Peripheral:\t{}".format(device.addr))
-			try:
-				peripherals.append(preparePeripheral(device))
-			except(btle.BTLEException):
-				print("Failed to connect")
+			devices = scanIAQDevices()
 		
-		# See if a Thingspeak channel exists for this device
-		# Create a new channel if not
-		for peripheral in peripherals:
+		# Read all connected devices characteristics
+		# Add them to a buffer and post to the cloud
+		
+		#for peripheral in peripherals:
+		for device in devices:
+			try:
+				peripheral = preparePeripheral(device)
+			except:
+				print("Failed to prepare peripheral")
+				break
+			
+			print("Peripheral address: {}".format(peripheral.addr.upper()))
+			
 			if peripheral.addr.upper() in cloud.channels.keys():
 				peripheral.channel = cloud.channels[peripheral.addr.upper()]
 			else:
 				peripheral.channel = cloud.create_channel(peripheral.addr.upper())
-		
-		# Read all connected devices characteristics
-		# Add them to a buffer and post to the cloud
-		print("Reading peripherals:")
-		for peripheral in peripherals:
-			print(peripheral.addr)
+			
 			time.sleep(2);#Wait for the peripheral to write all measurements
 			
-			readCharacteristicsToBuffer(peripheral)
-
-			peripheral.channel.post()
+			send_data=readCharacteristicsToBuffer(peripheral)
+			peripheral.channel.post(send_data)
 			peripheral.disconnect()
-			status_led.blink(3,0.5)
 		
-		#sys.exit(1)
 		print("Time: {}\n".format(datetime.datetime.now()))
-		time.sleep(2*60)
+		time.sleep(60)
 
 
 if __name__ == "__main__":
 	main()
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

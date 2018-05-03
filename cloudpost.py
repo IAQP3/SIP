@@ -27,24 +27,25 @@ class CloudPost(object):
 
 	def create_channel(self, address):
 		# parsed_address = address.replace(":", "")
-		print("Creating channel")
+
 		data = {'api_key': self.user_api_key,  'name' : 'IAQP device: ' + address, 'description': address} 
-		#print("Data before updating:\n{}".format(data));
-		#print("self.fields before updating:\n{}".format(self.fields));
+		print("Data before updating:\n{}".format(data));
+		print("self.fields before updating:\n{}".format(self.fields));
 		data.update(self.fields)
-		#print("Creating channel with data:\n{}".format(data))
+		print("Creating channel with data:\n{}".format(data))
 		try:
 			r = requests.post(self.create_channel_url, data)
 			response = r.json()
+			print(response)
 			self.parse_channel_info(response)
 			return self.channels[address]
 			
 		except requests.exceptions.ConnectionError as e:
 			print('Connection Error')
 			response = e
-		#print("\nRESPONSE #")
-		#print(response)
-		
+		print("\nRESPONSE #")
+		print(response)
+		print("\n")
 		return None
 
 	def get_channel_information(self):
@@ -69,31 +70,20 @@ class CloudPost(object):
 
 	def parse_channel_info(self, response):
 
-		self.channels = {}
-		#print("Parsing ---------------")
-		#print(response)
+		#convert to list if there is only single channel object
+		if (isinstance(response, list)==False):
+			response=[response]
 		
-		single_channel = False
-		for i in response:
-			if i == "name":
-				print("Only one channel")
-				single_channel = True
-		#print(response['name'])
-		if single_channel == True:
-			if "IAQ" in response['name']:
-				new_channel = Channel(str(response['api_keys'][0]['api_key']), response['name'], response['description'], response['id'])
-				self.channels[response['description']] = new_channel
-				print("new channel parsed")
-				single_channel = False
-		else:
-			for iter_channel in response:
-				#print(iter_channel)
-				if "IAQP device" in iter_channel['name']:
-					new_channel = Channel(str(iter_channel['api_keys'][0]['api_key']), iter_channel['name'], iter_channel['description'], iter_channel['id'])
-					self.channels[iter_channel['description']] = new_channel
-					
-
-	
+		for iter_channel in response:
+			if "IAQP device" in iter_channel['name']:
+				api_key = str(iter_channel['api_keys'][0]['api_key'])
+				name = iter_channel['name']
+				description = iter_channel['description']
+				id = iter_channel['id']
+				
+				new_channel = Channel(api_key, name, description, id)
+				self.channels[iter_channel['description']] = new_channel
+		
 
 	def print_channel_info(self):
 		if self.channel_info != None:
@@ -133,7 +123,5 @@ class CloudPost(object):
 			new_uuid['factor'] =  float(atype.find('factor').text)
 			new_uuid['unit'] =  atype.find('unit').text
 			self.supportedUUIDS.append(new_uuid)
-			
-			
 			
 			

@@ -11,35 +11,27 @@ class Channel():
 		self.supportedUUIDS = []
 		self.name = name
 		self.description = address
-		self.buffer = []
 		self.api_post_url = None
 		self.load_settings()
 		self.id = ID;
 		self.load_uuids()
 	
-	def add_to_buffer(self, field, value):
-		self.buffer.append({'field': str(field), 'value': value})
-
-	def post(self):
+	def post(self, send_data):
 		print("Sending data to cloud")
 		data = {'api_key': self.api_key}
 		
-		for pair in self.buffer:
+		for pair in send_data:
 			data['field' + pair['field']] = pair['value']
 		
 		try:
 			r = requests.post(self.api_post_url, data)
+			response = r.json()
+			print(response)
+			
 		except requests.exceptions.ConnectionError as e:
 			print('Connection Error')
 			print(e)
 		
-		if (r.status_code==200):
-			print("\nSuccesfully posted data:")
-			print(r.json())
-		else:
-			print("\nError posting data:")
-		
-		return r.status_code
 	
 	def get_field_for_UUID(self, uuid):
 		for a in self.supportedUUIDS:

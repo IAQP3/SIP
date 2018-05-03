@@ -37,10 +37,10 @@
             <unit>ppb</unit>
         </uuid>
         <uuid>
-            <name>00000206-0000-1000-8000-00805f9b34fb</name>
-            <sensor>Light</sensor>
+            <name>00000203-0000-1000-8000-00805f9b34fb</name>
+            <sensor>Red</sensor>
             <location>H2S</location>
-            <data_type>h</data_type>
+            <data_type>H</data_type>
             <field>5</field>
             <factor>1</factor>
             <unit></unit>
